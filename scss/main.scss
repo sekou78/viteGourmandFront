@@ -6,6 +6,20 @@ html {
   min-height: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-sans-serif;
+}
+
+p {
+  font-family: $font-family-serif;
+  font-size: 15px;
+}
+
 .font-serif {
   font-family: $font-family-serif;
 }
@@ -31,15 +45,16 @@ html {
 
 //Main============================================
 main {
-  margin-bottom: 40px;
+  margin-bottom: 230px;
+  overflow-x: hidden;
 }
 
 //Footer============================================
 footer.footer {
+  padding: 5px;
   position: absolute;
+  bottom: 0;
   width: 100%;
-  background-color: #1c1c1c;
-  font-family: $font-family-serif;
 }
 
 .footer h5 {
@@ -61,4 +76,39 @@ footer.footer {
   display: inline-block;
   max-width: 160px;
   white-space: normal;
+}
+
+//Page d'accueil Hero scene============================================
+.hero-scene {
+  margin-bottom: 15px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url(../assets/images/img_hero_section.webp);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba($secondary, 0.6);
+    background-blend-mode: multiply;
+  }
+
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+
+  .hero-scene-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.hero-scene .hero-scene-content h1 {
+  font-size: 32px;
 }
