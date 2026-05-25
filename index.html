@@ -48,17 +48,17 @@
             class="collapse navbar-collapse font-serif"
             id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="/">Accueil</a>
+              <li class="nav-item mb-2">
+                <a class="nav-link btn-header" href="/">Accueil</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Menu</a>
+              <li class="nav-item mb-2">
+                <a class="nav-link btn-header" href="#">Menu</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Connexion</a>
+              <li class="nav-item mb-2">
+                <a class="nav-link btn-header" href="#">Connexion</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+              <li class="nav-item mb-2">
+                <a class="nav-link btn-header" href="#">Contact</a>
               </li>
             </ul>
           </div>
@@ -70,7 +70,49 @@
       <!-- Le contenu de la page sera ajouté ici -->
     </main>
 
-    <footer>Pied de page</footer>
+    <footer class="bg-dark text-white py-2 footer">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4 mb-3 order-1 order-lg-2">
+            <h5 class="m-0">Vite & Gourmand</h5>
+            <p>Traiteur événementiel à Bordeaux depuis plus de 25 ans</p>
+          </div>
+
+          <div class="col-md-4 mb-3 order-2 order-lg-1">
+            <h5 class="m-0">Horaires</h5>
+            <p>Lundi au Jeudi : 9h00 - 18h00</p>
+            <p>Vendredi : 9h00 - 20h00</p>
+            <p>Samedi : 10h00 - 20h00</p>
+            <p>Dimanche : Fermé</p>
+          </div>
+
+          <div class="col-md-4 mb-3 order-3">
+            <h5 class="m-0">Contact</h5>
+            <p>05 56 00 00 00</p>
+            <p>contact@viteetgourmand.fr</p>
+            <p>Bordeaux, France</p>
+          </div>
+        </div>
+        <div
+          class="footer-bottom d-flex align-items-center justify-content-lg-between text-center">
+          <div>
+            <a href="#" class="fs-6 lh-1 fw-lighter"> Mentions légales </a>
+          </div>
+
+          <div>
+            <a href="#" class="fs-6 lh-1 fw-lighter">
+              Conditions générales de vente
+            </a>
+          </div>
+
+          <div>
+            <a href="#" class="fs-6 lh-1 fw-lighter">
+              Politique de confidentialité
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script type="module" src="Router/router.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
