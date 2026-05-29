@@ -11999,13 +11999,10 @@ h6,
   font-family: "Poppins", sans-serif;
 }
 
+.font-serif,
 p {
   font-family: "Inter", serif;
   font-size: 15px;
-}
-
-.font-serif {
-  font-family: "Inter", serif;
 }
 
 .logoVg {
@@ -12027,13 +12024,11 @@ p {
 }
 
 main {
-  margin-bottom: 500px;
   overflow-x: hidden;
 }
 
 footer.footer {
   padding: 5px;
-  position: absolute;
   bottom: 0;
   width: 100%;
 }
@@ -12088,4 +12083,77 @@ footer.footer {
 
 .hero-scene .hero-scene-content h1, .hero-scene .hero-scene-content .h1 {
   font-size: 32px;
+}
+
+#avisCarousel .carousel-inner {
+  height: 320px; /* FIXE, pas min-height */
+}
+
+.titre-avis {
+  font-size: 20px;
+}
+
+.avis-item {
+  padding-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.avis-item p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* nombre de lignes visibles */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+}
+
+.avis-item p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to top, white, transparent);
+}
+
+.avis-img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-item {
+  text-align: center;
+  height: 320px;
+  overflow: hidden;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f4a261;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #f4a261;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }/*# sourceMappingURL=main.css.map */
