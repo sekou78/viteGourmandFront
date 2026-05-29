@@ -6,8 +6,19 @@ html {
   min-height: 100%;
 }
 
-.font-serif {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-sans-serif;
+}
+
+.font-serif,
+p {
   font-family: $font-family-serif;
+  font-size: 15px;
 }
 
 //Header============================================
@@ -31,15 +42,16 @@ html {
 
 //Main============================================
 main {
-  margin-bottom: 40px;
+  // margin-bottom: 220px;
+  overflow-x: hidden;
 }
 
 //Footer============================================
 footer.footer {
-  position: absolute;
+  padding: 5px;
+  // position: absolute;
+  bottom: 0;
   width: 100%;
-  background-color: #1c1c1c;
-  font-family: $font-family-serif;
 }
 
 .footer h5 {
@@ -61,4 +73,112 @@ footer.footer {
   display: inline-block;
   max-width: 160px;
   white-space: normal;
+}
+
+//Page d'accueil Hero scene============================================
+.hero-scene {
+  margin-bottom: 15px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url(../assets/images/img_hero_section.webp);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba($secondary, 0.6);
+    background-blend-mode: multiply;
+  }
+
+  * {
+    //Positionner les éléments devant le &::before
+    position: relative;
+  }
+
+  .hero-scene-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.hero-scene .hero-scene-content h1 {
+  font-size: 32px;
+}
+
+//Page d'accueil Avis============================================
+#avisCarousel .carousel-inner {
+  height: 320px; /* FIXE, pas min-height */
+}
+
+.titre-avis {
+  font-size: 20px;
+}
+
+.avis-item {
+  padding-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.avis-item p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* nombre de lignes visibles */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+}
+
+.avis-item p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to top, white, transparent);
+}
+
+.avis-img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-item {
+  text-align: center;
+  height: 320px;
+  overflow: hidden;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $secondary;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-control-prev {
+  left: 15px;
+}
+
+.carousel-control-next {
+  right: 15px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: $secondary;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
 }
