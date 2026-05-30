@@ -12156,4 +12156,175 @@ footer.footer {
   width: 12px;
   height: 12px;
   border-radius: 50%;
+}
+
+.hero-liste-menu {
+  height: 45vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets//images/menus/img_hero_menu.avif?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card img {
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.price-liste-menu {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f4a261;
+}
+
+.btn-liste-menu {
+  background-color: #e63946;
+  border: none;
+}
+
+.btn-liste-menu:hover {
+  background-color: #f4a261;
+}
+
+.badge-custom {
+  background-color: #ede0d4;
+  color: #f4a261;
+}
+
+.badge-theme {
+  background-color: #ede0d4;
+  color: #f4a261;
+}
+
+.badge-regime {
+  background-color: #d8f3dc;
+  color: #2d6a4f;
+}
+
+.form-select,
+.form-control {
+  border-radius: 12px;
+}
+
+.form-range::-webkit-slider-thumb {
+  background: #e63946;
+}
+
+.hero-menu-detail {
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4509803922), rgba(0, 0, 0, 0.4509803922)), url("../assets/images/menus/img_menu_1.avif?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-box {
+  background: #f9f9f9;
+  border-radius: 25px;
+  padding: 40px;
+  margin-top: -80px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  color: #f4a261;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.menu-item {
+  border-bottom: 1px solid #f9f9f9;
+  padding: 15px 0;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.price-menu-detail {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f4a261;
+}
+
+.btn-reserver {
+  background-color: #e63946;
+  border: none;
+  padding: 12px 30px;
+}
+
+.btn-reserver:hover {
+  background-color: #f4a261;
+}
+
+.badge-custom-menu-detail {
+  background-color: #f9f9f9;
+  color: #f4a261;
+}
+
+.info-card {
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  padding: 25px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 5px 15px rgb(0, 0, 0);
+}
+
+.scroll-liste-menu {
+  opacity: 1;
+  z-index: 99999;
+  background-color: #e63946;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.scroll-liste-menu i {
+  font-size: 25px;
+  color: white;
+}
+
+.scroll-liste-menu:hover {
+  background-color: color-mix(in srgb, #f4a261, transparent 20%);
+}
+
+.tooltip-text {
+  position: absolute;
+  left: 55px;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.scroll-liste-menu:hover .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }/*# sourceMappingURL=main.css.map */
