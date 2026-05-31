@@ -12348,4 +12348,11 @@ footer.footer {
   background: linear-gradient(rgba(0, 0, 0, 0.4509803922), rgba(0, 0, 0, 0.4509803922)), url("../assets/images/menus/img_menu_3.avif?q=80&w=1600&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
+}
+
+.hero-page-contact {
+  height: 25vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4509803922), rgba(0, 0, 0, 0.4509803922)), url("../assets/images/img_hero_contact.avif?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=main.css.map */
