@@ -1,9 +1,22 @@
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import "custom";
 
-html {
-  position: relative;
-  min-height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+//Main============================================
+main {
+  flex: 1 0 auto;
+  overflow-x: hidden;
 }
 
 h1,
@@ -40,18 +53,10 @@ p {
   align-items: center;
 }
 
-//Main============================================
-main {
-  // margin-bottom: 220px;
-  overflow-x: hidden;
-}
-
 //Footer============================================
 footer.footer {
-  padding: 5px;
-  // position: absolute;
-  bottom: 0;
   width: 100%;
+  margin-top: auto;
 }
 
 .footer h5 {
@@ -89,7 +94,7 @@ footer.footer {
     background-image: url(../assets/images/img_hero_section.webp);
     background-position: center;
     background-size: cover;
-    background-color: rgba($secondary, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
   }
 
@@ -358,4 +363,24 @@ footer.footer {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+}
+
+// Page inscription============================================
+.hero-inscription {
+  height: 25vh;
+  background:
+    linear-gradient(#00000073, #00000073),
+    url("../assets/images/menus/img_menu_2.avif?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+// Page connexion============================================
+.hero-connexion {
+  height: 25vh;
+  background:
+    linear-gradient(#00000073, #00000073),
+    url("../assets/images/menus/img_menu_3.avif?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
 }

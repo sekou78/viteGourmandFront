@@ -11980,9 +11980,21 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html {
-  position: relative;
-  min-height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  overflow-x: hidden;
 }
 
 h1, .h1,
@@ -12023,14 +12035,9 @@ p {
   align-items: center;
 }
 
-main {
-  overflow-x: hidden;
-}
-
 footer.footer {
-  padding: 5px;
-  bottom: 0;
   width: 100%;
+  margin-top: auto;
 }
 
 .footer h5, .footer .h5 {
@@ -12068,7 +12075,7 @@ footer.footer {
   background-image: url(../assets/images/img_hero_section.webp);
   background-position: center;
   background-size: cover;
-  background-color: rgba(244, 162, 97, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: multiply;
 }
 .hero-scene * {
@@ -12327,4 +12334,18 @@ footer.footer {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+}
+
+.hero-inscription {
+  height: 25vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4509803922), rgba(0, 0, 0, 0.4509803922)), url("../assets/images/menus/img_menu_2.avif?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-connexion {
+  height: 25vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4509803922), rgba(0, 0, 0, 0.4509803922)), url("../assets/images/menus/img_menu_3.avif?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=main.css.map */
