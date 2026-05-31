@@ -385,7 +385,7 @@ footer.footer {
   background-position: center;
 }
 
-// Page connexion============================================
+// Page contact============================================
 .hero-page-contact {
   height: 25vh;
   background:
@@ -393,4 +393,18 @@ footer.footer {
     url("../assets/images/img_hero_contact.avif?q=80&w=1600&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
+}
+
+// Page commande============================================
+.hero-page-commande {
+  height: 45vh;
+  background:
+    linear-gradient(#00000073, #00000073),
+    url("../assets/images/img_hero_commande.webp?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.recap-commande-prix {
+  top: 20px;
 }

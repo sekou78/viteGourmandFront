@@ -1,0 +1,190 @@
+<div>
+  <!-- HERO -->
+  <div
+    class="hero-page-commande d-flex align-items-center justify-content-center text-center text-white">
+    <div>
+      <h1 class="display-3 fw-bold">Commande du menu</h1>
+      <p class="lead">Une cuisine raffinée préparée avec passion</p>
+    </div>
+  </div>
+
+  <div class="container py-3">
+    <div class="row g-5">
+      <!-- FORMULAIRE -->
+      <div class="col-lg-8">
+        <form id="formCommandeMenu">
+          <!-- CLIENT -->
+          <div class="mb-5">
+            <div class="text-center mb-2">
+              <h5>Informations client</h5>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="prenomClient" class="form-label">Prénom</label>
+                <input
+                  type="text"
+                  id="prenomClient"
+                  class="form-control shadow" />
+              </div>
+
+              <div class="col-md-6">
+                <label for="nomClient" class="form-label">Nom</label>
+                <input type="text" id="nomClient" class="form-control shadow" />
+              </div>
+
+              <div class="col-md-6">
+                <label for="emailClient" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="emailClient"
+                  class="form-control shadow" />
+              </div>
+
+              <div class="col-md-6">
+                <label for="telephoneClient" class="form-label">
+                  Téléphone
+                </label>
+                <input
+                  type="tel"
+                  id="telephoneClient"
+                  class="form-control shadow" />
+              </div>
+            </div>
+          </div>
+
+          <!-- LIVRAISON -->
+          <div class="mb-5">
+            <div class="text-center mb-2">
+              <h5>Livraison</h5>
+            </div>
+
+            <div class="mb-3">
+              <label for="adresseLivraison" class="form-label">
+                Adresse de livraison *
+              </label>
+              <input
+                type="text"
+                id="adresseLivraison"
+                class="form-control shadow"
+                required />
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="dateLivraison" class="form-label"> Date * </label>
+                <input
+                  type="date"
+                  id="dateLivraison"
+                  class="form-control shadow"
+                  required />
+              </div>
+
+              <div class="col-md-6">
+                <label for="heureLivraison" class="form-label">Heure *</label>
+                <input
+                  type="time"
+                  id="heureLivraison"
+                  class="form-control shadow"
+                  required />
+              </div>
+            </div>
+
+            <div class="form-text mt-2">
+              Livraison gratuite à Bordeaux. Hors Bordeaux : 5€ + 0,59€/km.
+            </div>
+          </div>
+
+          <!-- MENU -->
+          <div class="mb-5">
+            <div class="text-center mb-2">
+              <h5>Menu sélectionné</h5>
+            </div>
+
+            <input
+              type="text"
+              id="menuChoisi"
+              class="form-control shadow"
+              value="Menu Signature"
+              readonly />
+          </div>
+
+          <!-- PERSONNES -->
+          <div class="mb-5">
+            <div class="text-center mb-2">
+              <h5>Nombre de personnes</h5>
+            </div>
+
+            <div class="row g-3 align-items-center">
+              <div class="col-md-6">
+                <input
+                  type="number"
+                  id="nbPersonnes"
+                  class="form-control shadow"
+                  min="1"
+                  value="2"
+                  required />
+              </div>
+
+              <div class="col-md-6">
+                <p class="mb-0 text-muted">
+                  Minimum requis :
+                  <strong>
+                    <span id="minPersonnesRequis">2 personnes</span>
+                  </strong>
+                </p>
+              </div>
+            </div>
+
+            <div class="form-text">
+              +10% de réduction à partir de 5 personnes supplémentaires.
+            </div>
+          </div>
+        </form>
+
+        <div class="mb-2">
+          <p class="small text-primary">
+            Les champs marqués d'un * sont obligatoires.
+          </p>
+        </div>
+      </div>
+
+      <!-- RECAP PRIX -->
+      <div class="col-lg-4">
+        <div class="card shadow p-4 sticky-top recap-commande-prix">
+          <h3 class="mb-4">Récapitulatif</h3>
+
+          <div class="mb-3">
+            <p class="text-muted mb-1">Prix du menu</p>
+            <h5 id="prixMenu" class="text-primary">39€</h5>
+          </div>
+
+          <div class="mb-3">
+            <p class="text-muted mb-1">Personnes</p>
+            <h5 id="affichagePersonnes" class="text-primary">2</h5>
+          </div>
+
+          <div class="mb-3">
+            <p class="text-muted mb-1">Livraison</p>
+            <h5 id="prixLivraison" class="text-primary">0€</h5>
+          </div>
+
+          <hr />
+
+          <div class="mb-3">
+            <p class="text-muted mb-1">Total</p>
+            <h3 id="totalCommande" class="text-primary">78€</h3>
+          </div>
+
+          <button class="btn btn-success w-100 btn-lg" id="btnCommander">
+            Valider la commande
+          </button>
+
+          <p class="small text-muted mt-3">
+            Un email de confirmation vous sera envoyé.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
