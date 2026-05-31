@@ -31,6 +31,7 @@ export const allRoutes = [
     [],
     "/js/auth/connexion.js",
   ),
+  new Route("/contact", "Contact", "/pages/contact.html", [], "/js/contact.js"),
 ];
 
 //Le titre s'affiche comme ceci: Route.titre-websiteName
