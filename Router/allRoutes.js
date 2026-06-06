@@ -33,11 +33,25 @@ export const allRoutes = [
   ),
   new Route("/contact", "Contact", "/pages/contact.html", [], "/js/contact.js"),
   new Route(
-    "/commande",
+    "/commander",
     "Commander",
-    "/pages/menu/commande.html",
+    "/pages/commande/commander.html",
     [],
-    "/js/menu/commande.js",
+    "/js/commande/commander.js",
+  ),
+  new Route(
+    "/utilisateur",
+    "Utilisateur",
+    "/pages/comptes/utilisateur.html",
+    [],
+    "/js/comptes/utilisateur.js",
+  ),
+  new Route(
+    "/detailCommande",
+    "Détail de la commande",
+    "/pages/commande/detailCommande.html",
+    [],
+    "/js/commande/detailCommande.js",
   ),
 ];
 

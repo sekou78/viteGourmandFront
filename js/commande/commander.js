@@ -1,20 +1,20 @@
-// Information client commande menu
+// Information client commander menu
 const commandeMenuForm = document.getElementById("formCommandeMenu");
 const prenomClientCommandeInput = document.getElementById("prenomClient");
 const nomClientCommandeInput = document.getElementById("nomClient");
 const emailClientCommandeInput = document.getElementById("emailClient");
 const telephoneClientCommandeInput = document.getElementById("telephoneClient");
-// Information commande livraison
+// Information commander livraison
 const adresseLivraisonCommandeInput =
   document.getElementById("adresseLivraison");
 const dateLivraisonCommandeInput = document.getElementById("dateLivraison");
 const heureLivraisonCommandeInput = document.getElementById("heureLivraison");
-// Information commande menu
+// Information commander menu
 const menuCommandeChoisiInput = document.getElementById("menuChoisi");
 // Information nombres de personnes
 const nombrePersonnesCommandeInput = document.getElementById("nbPersonnes");
 const personnesMinimumRequis = document.getElementById("minPersonnesRequis");
-// Récapitulatif commande
+// Récapitulatif commander
 const prixMenuChoisiDisplay = document.getElementById("prixMenu");
 const affNbresPersonnesDisplay = document.getElementById("affichagePersonnes");
 const prixLivraisonDisplay = document.getElementById("prixLivraison");
@@ -28,6 +28,8 @@ nomClientCommandeInput.addEventListener("keyup", validateCommandeForm);
 emailClientCommandeInput.addEventListener("keyup", validateCommandeForm);
 telephoneClientCommandeInput.addEventListener("keyup", validateCommandeForm);
 adresseLivraisonCommandeInput.addEventListener("keyup", validateCommandeForm);
+dateLivraisonCommandeInput.addEventListener("change", validateCommandeForm);
+heureLivraisonCommandeInput.addEventListener("change", validateCommandeForm);
 nombrePersonnesCommandeInput.addEventListener("keyup", validateCommandeForm);
 
 btnCommanderMenu.addEventListener("click", commanderMenu);
@@ -47,6 +49,8 @@ function validateCommandeForm() {
     adresseLivraisonCommandeInput,
   );
   const AdresseOK = validateAdresseCommande(adresseLivraisonCommandeInput);
+  const dateOK = validateInputCommandeRequired(dateLivraisonCommandeInput);
+  const heureOK = validateInputCommandeRequired(heureLivraisonCommandeInput);
   const personnesOK = validateInputCommandeRequired(
     nombrePersonnesCommandeInput,
   );
@@ -63,6 +67,8 @@ function validateCommandeForm() {
     TelephoneOK &&
     adresseOK &&
     AdresseOK &&
+    dateOK &&
+    heureOK &&
     personnesOK &&
     PersonnesOK
   ) {
@@ -150,4 +156,6 @@ function validateIntegerNbresPersInput(input) {
 //Commander le menu
 function commanderMenu() {
   alert("Votre commande a été prise en compte !");
+
+  window.location.href = "/utilisateur";
 }

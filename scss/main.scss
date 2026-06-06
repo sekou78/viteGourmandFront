@@ -5,6 +5,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: $font-family-serif;
 }
 
 body {
@@ -395,8 +396,8 @@ footer.footer {
   background-position: center;
 }
 
-// Page commande============================================
-.hero-page-commande {
+// Page commander============================================
+.hero-page-commander {
   height: 45vh;
   background:
     linear-gradient(#00000073, #00000073),
@@ -405,6 +406,33 @@ footer.footer {
   background-position: center;
 }
 
-.recap-commande-prix {
+.recap-commander-prix {
   top: 20px;
+}
+
+// Page espace utilisateur============================================
+.hero-page-user-space {
+  height: 45vh;
+  background:
+    linear-gradient(#00000073, #00000073),
+    url("../assets/images/img_hero_user_space.webp?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-voir-details-commander:hover {
+  background-color: $primary;
+  color: white;
+}
+
+.btn-annuler-commander:hover {
+  background-color: $primary;
+  color: white;
+}
+
+// Page détail commande============================================
+.img-menu-detail-commande {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }

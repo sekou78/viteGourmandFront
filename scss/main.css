@@ -11984,6 +11984,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Inter", serif;
 }
 
 body {
@@ -12357,13 +12358,37 @@ footer.footer {
   background-position: center;
 }
 
-.hero-page-commande {
+.hero-page-commander {
   height: 45vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4509803922), rgba(0, 0, 0, 0.4509803922)), url("../assets/images/img_hero_commande.webp?q=80&w=1600&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
 }
 
-.recap-commande-prix {
+.recap-commander-prix {
   top: 20px;
+}
+
+.hero-page-user-space {
+  height: 45vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4509803922), rgba(0, 0, 0, 0.4509803922)), url("../assets/images/img_hero_user_space.webp?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-voir-details-commander:hover {
+  background-color: #e63946;
+  color: white;
+}
+
+.btn-annuler-commander:hover {
+  background-color: #e63946;
+  color: white;
+}
+
+.img-menu-detail-commande {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
