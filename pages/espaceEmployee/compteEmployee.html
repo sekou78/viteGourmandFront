@@ -1,0 +1,169 @@
+<div>
+  <!-- HERO -->
+  <div class="bg-dark text-center text-white py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Tableau de bord Employé</h1>
+      <p class="lead mb-0">Gestion des commandes, menus et avis clients</p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <!-- STATS -->
+    <div class="row g-4 mb-4">
+      <div class="col-md-3">
+        <div class="card shadow border-0 text-center">
+          <div class="card-body">
+            <h2 id="statAttente" class="text-warning">0</h2>
+            <p>En attente</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow border-0 text-center">
+          <div class="card-body">
+            <h2 id="statPreparation" class="text-primary">0</h2>
+            <p>En préparation</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow border-0 text-center">
+          <div class="card-body">
+            <h2 id="statLivraison" class="text-success">0</h2>
+            <p>En livraison</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow border-0 text-center">
+          <div class="card-body">
+            <h2 id="statAvis" class="text-danger">0</h2>
+            <p>Avis à valider</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTRES -->
+    <div class="card shadow border-0 mb-4">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-5">
+            <input
+              id="filterClient"
+              class="form-control"
+              placeholder="Nom client" />
+          </div>
+
+          <div class="col-md-5">
+            <select id="filterStatus" class="form-select">
+              <option value="">Tous les statuts</option>
+              <option>En attente</option>
+              <option>Acceptée</option>
+              <option>En préparation</option>
+              <option>En livraison</option>
+              <option>Terminée</option>
+              <option>Annulée</option>
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <button id="btnFiltrer" class="btn btn-primary w-100">
+              Filtrer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMMANDES -->
+    <div id="ordersContainer"></div>
+
+    <!-- NAV -->
+    <div class="card shadow border-0 mb-4">
+      <div class="card-body">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <button class="nav-link active" data-section="sectionCommandes">
+              Commandes
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link" data-section="sectionMenus">Menus</button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link" data-section="sectionHoraires">
+              Horaires
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link" data-section="sectionAvis">Avis</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTIONS -->
+  <div id="sectionCommandes" class="employee-section container">
+    <h4>Commandes</h4>
+  </div>
+
+  <div id="sectionMenus" class="employee-section d-none container">
+    <h4>Menus</h4>
+    <div id="menusContainer"></div>
+  </div>
+
+  <div id="sectionHoraires" class="employee-section d-none container">
+    <h4>Horaires</h4>
+
+    <input class="form-control mb-2" id="horairesSemaine" />
+    <input class="form-control mb-2" id="horairesWeekend" />
+
+    <button class="btn btn-primary" id="btnSaveHoraires">Enregistrer</button>
+  </div>
+
+  <div id="sectionAvis" class="employee-section d-none container">
+    <h4>Avis clients</h4>
+    <div id="avisContainer"></div>
+  </div>
+</div>
+
+<div class="modal fade" id="cancelModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Annulation commande</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <input type="hidden" id="cancelOrderId" />
+
+        <select id="cancelContactMode" class="form-select mb-2">
+          <option value="">Mode contact</option>
+          <option value="telephone">Téléphone</option>
+          <option value="email">Email</option>
+        </select>
+
+        <textarea
+          id="cancelReason"
+          class="form-control"
+          placeholder="Motif"></textarea>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">
+          Fermer
+        </button>
+        <button class="btn btn-danger" id="btnConfirmCancel">Confirmer</button>
+      </div>
+    </div>
+  </div>
+</div>
