@@ -93,8 +93,9 @@ function validConnexion() {
     const token = "CeciEstUnTokenDeConnexionExemple";
     setToken(token);
 
-    // setCookie(RoleCookieName, "user", 7);
-    setCookie(RoleCookieName, "admin", 7);
+    // setCookie(RoleCookieName, "client", 7);
+    // setCookie(RoleCookieName, "admin", 7);
+    setCookie(RoleCookieName, "Employee", 7);
 
     window.location.replace("/");
   } else {
